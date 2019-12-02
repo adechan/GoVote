@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Models"
+    "\\Controllers",
+    "\\Models",
+    "\\View"
   ],
-  "SelectedNode": "\\Models\\Voted.cs",
+  "SelectedNode": "\\Models",
   "PreviewInSolutionExplorer": false
 }
