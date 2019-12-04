@@ -8,23 +8,19 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Andreea\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Andreea Rindasu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andreea\\Desktop\\Skewl\\YEAR 3\\Sem 1\\.Net\\Project\\GoVote\\GoVote\\GoVote\\GoVote.csproj",
+      "projectUniqueName": "C:\\Users\\Andreea Rindasu\\Documents\\GitHub\\GoVote\\GoVote\\GoVote\\GoVote.csproj",
       "projectName": "GoVote",
-      "projectPath": "C:\\Users\\Andreea\\Desktop\\Skewl\\YEAR 3\\Sem 1\\.Net\\Project\\GoVote\\GoVote\\GoVote\\GoVote.csproj",
-      "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Andreea\\Desktop\\Skewl\\YEAR 3\\Sem 1\\.Net\\Project\\GoVote\\GoVote\\GoVote\\obj\\",
+      "projectPath": "C:\\Users\\Andreea Rindasu\\Documents\\GitHub\\GoVote\\GoVote\\GoVote\\GoVote.csproj",
+      "packagesPath": "C:\\Users\\Andreea Rindasu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Andreea Rindasu\\Documents\\GitHub\\GoVote\\GoVote\\GoVote\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Andreea Rindasu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
