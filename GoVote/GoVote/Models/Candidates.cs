@@ -4,12 +4,17 @@ namespace VotingService.Models
 {
     public class Candidates
     {
-        public int ID { get; set; }
+        public Guid ID { get; set; }
+        private string FirstName { get; set; }
+        private string LastName { get; set; }
+        private Guid PartyID { get; set; }
 
-        public string FirstName { get; set; }
-
-        public string LastName { get; set; }
-
-        public int PartyID { get; set; }
+        public Candidates(Guid id, string firstname, string lastname, Guid partyID)
+        {
+            ID = id;
+            FirstName = firstname;
+            LastName = lastname;
+            PartyID = partyID;
+        }
     }
 }

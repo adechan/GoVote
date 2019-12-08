@@ -5,23 +5,25 @@ namespace VotingService.Models
 {
     public class Citizens
     {
-        public class Citizens
+        public Guid ID { get; set; }
+        private long CNP { get; set; }
+        private string LastName { get; set; }
+        private string FirstName { get; set; }
+        private char Sex { get; set; }
+        private string Address { get; set; }
+        private string County { get; set; }
+        private string City { get; set; }
+
+        public Citizens(Guid id, long cnp, string lastname, string firstname, char sex, string address, string country, string city)
         {
-            public int ID { get; set; }
-
-            public long CNP { get; set; }
-
-            public string LastName { get; set; }
-
-            public string FirstName { get; set; }
-
-            public char Sex { get; set; }
-
-            public string Address { get; set; }
-
-            public string County { get; set; }
-
-            public string City { get; set; }
+            ID = id;
+            CNP = cnp;
+            LastName = lastname;
+            FirstName = firstname;
+            Sex = sex;
+            Address = address;
+            County = country;
+            City = city;
         }
-    }
+     }
 }
