@@ -1,12 +1,10 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace VotingService.Models
+﻿namespace VotingService.Models
 {
     public class Citizens
     {
+<<<<<<< HEAD
         public Guid ID { get; set; }
-        private long CNP { get; set; }
+        private string CNP { get; set; }
         private string LastName { get; set; }
         private string FirstName { get; set; }
         private char Sex { get; set; }
