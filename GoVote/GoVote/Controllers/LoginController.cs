@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using GoVote.Data;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GoVote.Controllers
 {
@@ -13,24 +9,31 @@ namespace GoVote.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        public static readonly string[] CNPs = new[]
-        {
-            "12345678910111213", "1234567891011121", "12345678910111", "12345678910111", "12345678910111"
-        };
+        private readonly CitizenDatabaseContext context;
 
-        private readonly ILogger<LoginController> _logger;
-
-        public LoginController(ILogger<LoginController> logger)
+        public LoginController(CitizenDatabaseContext context)
         {
-            _logger = logger;
+            this.context = context;
         }
+
+        //public static readonly string[] CNPs = new[]
+        //{
+        //    "12345678910111213", "1234567891011121", "12345678910111", "12345678910111", "12345678910111"
+        //};
+
+        //private readonly ILogger<LoginController> _logger;
+
+        //public LoginController(ILogger<LoginController> logger)
+        //{
+        //    _logger = logger;
+        //}
 
 
         //[HttpGet]
-        //public IEnumerable<Login> GetCNP ()
+        //public IEnumerable<VotingService.Models.Citizens> GetCNP()
         //{
         //    var rng = new Random();
-        //    return Enumerable.Range(1, 2).Select(index => new Login
+        //    return Enumerable.Range(1, 2).Select(index => new VotingService.Models.Citizens
         //    {
         //        CNP = CNPs[rng.Next(CNPs.Length)]
         //    })
@@ -38,12 +41,12 @@ namespace GoVote.Controllers
         //}
 
         [HttpPost]
-        public string Login ([FromBody] Citizens citizen)
+        public async Task<ActionResult<Citizen>> Login(CNPContainer container)
         {
-            if (CNPs.Contains(citizen.CNP))
-                return "good";
-
-            return "bad";
+            var cnp = context.Citizens.SingleOrDefault(c => c.CNP == container.CNP);
+            if (cnp == null)
+                return NotFound();
+            return Ok(cnp);
         }
 
     }

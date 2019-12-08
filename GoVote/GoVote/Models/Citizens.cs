@@ -1,15 +1,10 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace VotingService.Models
+﻿namespace VotingService.Models
 {
     public class Citizens
     {
-        public class Citizens
-        {
             public int ID { get; set; }
 
-            public long CNP { get; set; }
+            public string CNP { get; set; }
 
             public string LastName { get; set; }
 
@@ -22,6 +17,6 @@ namespace VotingService.Models
             public string County { get; set; }
 
             public string City { get; set; }
-        }
+      
     }
 }
