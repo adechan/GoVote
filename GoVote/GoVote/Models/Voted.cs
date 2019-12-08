@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace VotingService.Models
+﻿namespace VotingService.Models
 {
     public class Voted
     {
@@ -8,6 +6,6 @@ namespace VotingService.Models
 
         public int CandidateID;
 
-        public bool Voted;
+        public bool Vote;
     }
 }
