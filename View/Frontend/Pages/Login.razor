@@ -1,23 +1,14 @@
 ﻿@page "/"
 
-<div class="d-flex align-items-center flex-column w-100 mh-50" style="margin-top: 25%">
-    <div class="">
-        <h1>VOTUL TAU CONTEAZA!</h1>
-
-        <div class="card text-white bg-secondary mb-3 d-flex align-items-center flex-column" style="max-width: 18rem;">
-            <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <label for="cnp">CNP</label>
-                        <input type="number" class="form-control" id="cnp" placeholder="Introduceti CNP">
-                    </div>
-                    <a href="/home"><button class="btn btn-primary">Submit</button></a>
-                </form>
-            </div>
-        </div>
+<div class="d-flex align-items-center flex-column justify-content-center w-100 h-100 cont">
+    <h1 class="text-center text-uppercase">Votul tau conteaza!</h1>
+    <div id="formContent" class="rounded w-90 position-relative text-center">
+        <form>
+            <input type="number" id="login" class="fadeIn text text-center d-inline w-85" name="login" autocomplete="off" placeholder="Introduceti CNP">
+            <input type="submit" class="fadeIn" value="Log In" onclick="Login">
+        </form>
     </div>
 </div>
-
 
 
 

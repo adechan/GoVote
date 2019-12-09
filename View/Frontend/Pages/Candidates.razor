@@ -1,0 +1,124 @@
+﻿@page "/candidates"
+
+<NavMenuBar />
+<div class="w-100 h-100 pt-5">
+    <div class="row p-5">
+        <div class="col-sm-5">
+            <div class="card flex-row text-black bg-secondary mb-4 p-3">
+                <div class="imagee align-self-center">
+                    <img src="assets/pnl.png" />
+                </div>
+                <div class="p-3 name">
+                    <h3 class="card-title text-center font-weight-bold">Klaus Iohannis</h3>
+                    <p class="card-text text-center font-italic">detalii</p>
+                </div>
+                <div class="w-30 align-self-center">
+                    <button class="btn btn-primary"  type="button" data-toggle="modal" data-target="#voteModal">Voteaza</button>
+                </div>
+            </div>
+            <div class="card flex-row text-black bg-secondary mb-4 p-3">
+                <div class="imagee align-self-center">
+                    <img src="assets/psd.png" />
+                </div>
+                <div class="p-3 name">
+                    <h3 class="card-title text-center font-weight-bold">Viorica Dancila</h3>
+                    <p class="card-text text-center font-italic">detalii</p>
+                </div>
+                <div class="w-30 align-self-center butt">
+                    <a class="btn btn-primary" href="#" role="button">Voteaza</a>
+                </div>
+            </div>
+            <div class="card flex-row text-black bg-secondary mb-4 p-3">
+                <div class="imagee align-self-center">
+                    <img src="assets/usr.png" />
+                </div>
+                <div class="p-3 name">
+                    <h3 class="card-title text-center font-weight-bold">Dan Barna</h3>
+                    <p class="card-text text-center font-italic">detalii</p>
+                </div>
+                <div class="w-30 align-self-center butt">
+                    <a class="btn btn-primary" href="#" role="button">Voteaza</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 statistics">
+            <h2 class="text-center">Statistici</h2>
+            <div class="selection mx-auto mb-3">
+                <select class="browser-default custom-select">
+                    <option selected>Toate Orasele</option>
+                    <option value="AB">Alba</option>
+                    <option value="AG">Arges</option>
+                    <option value="AR">Arad</option>
+                    <option value="B">Bucuresti</option>
+                    <option value="BC">Bacau</option>
+                    <option value="BH">Bihor</option>
+                    <option value="BN">Bistrita</option>
+                    <option value="BR">Braila</option>
+                    <option value="BT">Botosani</option>
+                    <option value="BV">Brasov</option>
+                    <option value="BZ">Buzau</option>
+                    <option value="CJ">Cluj</option>
+                    <option value="CL">Calarasi</option>
+                    <option value="CS">Caras-Severin</option>
+                    <option value="CT">Constanta</option>
+                    <option value="CV">Covasna</option>
+                    <option value="DB">Dambovita</option>
+                    <option value="DJ">Dolj</option>
+                    <option value="GJ">Gorj</option>
+                    <option value="GL">Galati</option>
+                    <option value="GR">Giurgiu</option>
+                    <option value="HD">Hunedoara</option>
+                    <option value="HG">Harghita</option>
+                    <option value="IF">Ilfov</option>
+                    <option value="IL">Ialomita</option>
+                    <option value="IS">Iasi</option>
+                    <option value="MH">Mehedinti</option>
+                    <option value="MM">Maramures</option>
+                    <option value="MS">Mures</option>
+                    <option value="NT">Neamt</option>
+                    <option value="OT">Olt</option>
+                    <option value="PH">Prahova</option>
+                    <option value="SB">Sibiu</option>
+                    <option value="SJ">Salaj</option>
+                    <option value="SM">Satu-Mare</option>
+                    <option value="SV">Suceava</option>
+                    <option value="TL">Tulcea</option>
+                    <option value="TM">Timis</option>
+                    <option value="TR">Teleorman</option>
+                    <option value="VL">Valcea</option>
+                    <option value="VN">Vrancea</option>
+                    <option value="VS">Vaslui</option>
+                </select>
+            </div>
+            <div class="selection mx-auto">
+                <img src="assets/chart.png" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<BottomBar />
+
+<div class="modal fade" id="voteModal" tabindex="-1" role="dialog" aria-labelledby="voteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="voteModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Confirmare Vot</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code{
+}
+}
