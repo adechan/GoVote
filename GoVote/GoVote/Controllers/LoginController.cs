@@ -1,7 +1,8 @@
-using System.Linq;
 using System.Threading.Tasks;
 using GoVote.Data;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using GoVote.DTO;
 
 namespace GoVote.Controllers
 {
@@ -9,41 +10,20 @@ namespace GoVote.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private readonly CitizenDatabaseContext context;
+        private readonly IMediator _mediator;
 
-        public LoginController(CitizenDatabaseContext context)
+        public LoginController(IMediator mediator)
         {
-            this.context = context;
+            _mediator = mediator;
         }
 
-        //public static readonly string[] CNPs = new[]
-        //{
-        //    "12345678910111213", "1234567891011121", "12345678910111", "12345678910111", "12345678910111"
-        //};
 
-        //private readonly ILogger<LoginController> _logger;
-
-        //public LoginController(ILogger<LoginController> logger)
-        //{
-        //    _logger = logger;
-        //}
-
-
-        //[HttpGet]
-        //public IEnumerable<VotingService.Models.Citizens> GetCNP()
-        //{
-        //    var rng = new Random();
-        //    return Enumerable.Range(1, 2).Select(index => new VotingService.Models.Citizens
-        //    {
-        //        CNP = CNPs[rng.Next(CNPs.Length)]
-        //    })
-        //    .ToArray();
-        //}
-
-        [HttpPost]
-        public async Task<ActionResult<Citizen>> Login(CNPContainer container)
+        [HttpGet]
+        public async Task<ActionResult<Citizen>> Login([FromBody]CNPContainer container)
         {
-            var cnp = context.Citizens.SingleOrDefault(c => c.CNP == container.CNP);
+            var cnp = await _mediator.Send(container);
+            //return todo;
+            //var cnp = context.Citizens.SingleOrDefault(c => c.CNP == container.CNP);
             if (cnp == null)
                 return NotFound();
             return Ok(cnp);

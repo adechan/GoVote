@@ -60,7 +60,7 @@ namespace GoVote.Migrations
                     b.HasData(
                         new
                         {
-                            ID = new Guid("d5ef31d2-84f2-46b0-9ccf-9ffe452182fe"),
+                            ID = new Guid("f8c6a385-03f5-4d72-9f85-809115987e95"),
                             Address = "Cat address",
                             CNP = "1234567891234",
                             City = "Cat City",
