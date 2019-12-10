@@ -1,4 +1,6 @@
-﻿namespace VotingService.Models
+﻿using System;
+
+namespace VotingService.Models
 {
     public class Party
     {
