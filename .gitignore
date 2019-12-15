@@ -1,0 +1,7 @@
+
+*.dll
+*.exe
+*.pdb
+GoVote/GoVote/bin/*
+GoVote/GoVote/obj/Debug/netcoreapp3.0/GoVote.csproj.FileListAbsolute.txt
+*.cache
