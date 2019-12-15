@@ -102,7 +102,6 @@ C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\bin\Debug\netcore
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\staticwebassets\GoVote.StaticWebAssets.Manifest.cache
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\staticwebassets\GoVote.StaticWebAssets.xml
-C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.AssemblyInfoInputs.cache
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.AssemblyInfo.cs
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.RazorTargetAssemblyInfo.cache
@@ -110,3 +109,4 @@ C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcore
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.dll
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.pdb
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.csprojAssemblyReference.cache
+C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.MvcApplicationPartsAssemblyInfo.cache
