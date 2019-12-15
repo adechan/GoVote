@@ -1,31 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "D:\\facultate_an_3\\NET\\GoVote\\GoVote\\GoVote\\GoVote.csproj": {}
+    "C:\\Users\\Andreea Rindasu\\Documents\\GitHub\\GoVote\\GoVote\\GoVote\\GoVote.csproj": {}
   },
   "projects": {
-    "D:\\facultate_an_3\\NET\\GoVote\\GoVote\\GoVote\\GoVote.csproj": {
+    "C:\\Users\\Andreea Rindasu\\Documents\\GitHub\\GoVote\\GoVote\\GoVote\\GoVote.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\facultate_an_3\\NET\\GoVote\\GoVote\\GoVote\\GoVote.csproj",
+        "projectUniqueName": "C:\\Users\\Andreea Rindasu\\Documents\\GitHub\\GoVote\\GoVote\\GoVote\\GoVote.csproj",
         "projectName": "GoVote",
-        "projectPath": "D:\\facultate_an_3\\NET\\GoVote\\GoVote\\GoVote\\GoVote.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "D:\\facultate_an_3\\NET\\GoVote\\GoVote\\GoVote\\obj\\",
+        "projectPath": "C:\\Users\\Andreea Rindasu\\Documents\\GitHub\\GoVote\\GoVote\\GoVote\\GoVote.csproj",
+        "packagesPath": "C:\\Users\\Andreea Rindasu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Andreea Rindasu\\Documents\\GitHub\\GoVote\\GoVote\\GoVote\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andreea Rindasu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "netcoreapp3.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "netcoreapp3.0": {
             "projectReferences": {}
           }
         },
@@ -36,7 +36,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "netcoreapp3.0": {
           "dependencies": {
             "MediatR": {
               "target": "Package",
@@ -47,6 +47,10 @@
               "version": "[7.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Analyzers": {
               "target": "Package",
               "version": "[3.1.0, )"
             },
@@ -91,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
