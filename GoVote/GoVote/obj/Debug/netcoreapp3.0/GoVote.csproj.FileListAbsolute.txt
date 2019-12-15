@@ -109,3 +109,4 @@ C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcore
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.csproj.CopyComplete
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.dll
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.pdb
+C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.csprojAssemblyReference.cache

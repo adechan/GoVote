@@ -18,7 +18,7 @@ namespace GoVote.Controllers
         }
 
 
-        [HttpGet]
+        [HttpPost]
         public async Task<ActionResult<Citizen>> Login([FromBody]CNPContainer container)
         {
             var cnp = await _mediator.Send(container);
