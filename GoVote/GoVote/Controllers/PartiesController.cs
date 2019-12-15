@@ -8,24 +8,24 @@ namespace GoVote.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LoginController : ControllerBase
+    public class PartiesController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public LoginController(IMediator mediator)
+        public PartiesController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
-
-        [HttpPost]
-        public async Task<ActionResult<Citizen>> Login([FromBody]CNPContainer container)
+        [HttpGet]
+        public async Task<ActionResult<Party>> GetPartiesName()
         {
-            var cnp = await _mediator.Send(container);
-            if (cnp == null)
+            var parties = await _mediator.Send(new GetParties());
+            if (parties == null)
+            {
                 return NotFound();
-            return Ok(cnp);
+            }
+            return Ok(parties);
         }
-
     }
 }
