@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace GoVote.DTO
 {
-    public class GetParties : IRequest<Dictionary<string, string>>
+    public class GetParties : IRequest<List<Party>>
     {
     }
 }

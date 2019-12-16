@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GoVote.Business.Handlers
 {
-    public class GetCandidatesHandler : IRequestHandler<GetCandidates, Dictionary<string, string>>
+    public class GetCandidatesHandler : IRequestHandler<GetCandidates, List<CandidateSimple>>
     {
 
         private readonly CandidateDatabaseContext _context;
@@ -19,21 +19,15 @@ namespace GoVote.Business.Handlers
             _context = context;
         }
 
-        public async Task<Dictionary<string, string>> Handle(GetCandidates request, CancellationToken cancellationToken)
+        public async Task<List<CandidateSimple>> Handle(GetCandidates request, CancellationToken cancellationToken)
         {
             var candidates = await _context.Candidates.ToListAsync();
-            var candidatesName = new Dictionary<string, string>();
+            List<CandidateSimple> simpleCandidates = new List<CandidateSimple>();
 
             foreach (Candidate candidate in candidates)
-            {
-                string guid = candidate.ID.ToString();
+                simpleCandidates.Add(new CandidateSimple(candidate));
 
-                candidatesName.Add("ID", guid);
-                candidatesName.Add("LastName", candidate.LastName);
-                candidatesName.Add("FirstName", candidate.FirstName);
-            }
-
-            return candidatesName;
+            return simpleCandidates;
         }
 
     }

@@ -24,27 +24,51 @@ namespace GoVote.Business.Handlers
         public async Task<Dictionary<string, string>> Handle(GetCandidateDetail request, CancellationToken cancellationToken)
         {
             var candidates = await _context.Candidates.ToListAsync();
+            var candidateRequest = _context.Candidates.SingleOrDefault(c => c.ID == request.ID);
+
             var parties = await _context_p.Parties.ToArrayAsync();
 
             var candidatesById = new Dictionary<string, string>();
 
             var partyName =
                 from candidate in candidates
-                join party in parties on candidate.ID equals party.PartyID
+                join party in parties on candidate.PartyID equals party.PartyID
                 select new { Candidate = candidate.ID, Party = party.PartyName };
 
             var partyNameList = partyName.ToList();
 
+            string listString = "";
+            foreach (var party in partyNameList)
+                listString += party.Party + ", ";
 
-            foreach(Candidate candidate in candidates)
+            System.Diagnostics.Debug.WriteLine("partyNameList: " + listString);
+
+            foreach (Candidate candidate in candidates)
             {
-                var guid = candidate.ID.ToString();
-                candidatesById.Add("ID", guid);
-                candidatesById.Add("LastName", candidate.LastName);
-                candidatesById.Add("FirstName", candidate.FirstName);
-                candidatesById.Add("Party", partyNameList.Where(p => p.Candidate == candidate.PartyID).ToString());
+                if (candidate == candidateRequest)
+                {
+                    if (candidatesById.ContainsKey("ID"))
+                        break;
+
+                    var guid = candidate.ID.ToString();
+                    candidatesById.Add("ID", guid);
+
+                    foreach (var item in partyNameList.Where(p => p.Candidate == candidate.ID))
+                    {
+                        candidatesById.Add("Party", item.Party);
+                        break;
+                    }
+
+                    candidatesById.Add("LastName", candidate.LastName);
+                    candidatesById.Add("FirstName", candidate.FirstName);
+                }
             }
 
+            string listString2 = "";
+            foreach (var id in candidatesById)
+                listString2 += id.Key + ": " + id.Value + ", ";
+
+            System.Diagnostics.Debug.WriteLine("Candidate: " + listString2);
             return candidatesById;
         }
     }
