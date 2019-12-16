@@ -4,14 +4,16 @@ using GoVote.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GoVote.Migrations.CandidateDatabase
 {
     [DbContext(typeof(CandidateDatabaseContext))]
-    partial class CandidateDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20191216015400_CandidateDatabase_seed1")]
+    partial class CandidateDatabase_seed1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -23,7 +23,8 @@ namespace GoVote.Data
 
             //Seed Method
             modelBuilder.Entity<Candidate>().HasData(
-                Candidate.Create("Kitty", "Kat", new Guid("8C014A9D-C44B-42DA-8EEB-21EDEB756842"))
+                Candidate.Create("Kitty", "Kat", new Guid("8C014A9D-C44B-42DA-8EEB-21EDEB756842")),
+                Candidate.Create("Doggy", "Bobby", new Guid("8C014A9D-C44B-42DA-8EEB-21EDEB756842"))
             );
         }
 
