@@ -23,12 +23,6 @@ namespace GoVote.Business.Handlers
         }
         public async Task<Dictionary<string, string>> Handle(GetCandidateDetail request, CancellationToken cancellationToken)
         {
-            //var innerJoinQuery =
-            //  from category in categories
-            //  join prod in products on category.ID equals prod.CategoryID
-            //  select new { Category = category.ID, Product = prod.Name };
-
-
             var candidates = await _context.Candidates.ToListAsync();
             var parties = await _context_p.Parties.ToArrayAsync();
 
@@ -50,12 +44,6 @@ namespace GoVote.Business.Handlers
                 candidatesById.Add("FirstName", candidate.FirstName);
                 candidatesById.Add("Party", partyNameList.Where(p => p.Candidate == candidate.PartyID).ToString());
             }
-
-            //var candidate = await _context.Candidates.SingleOrDefaultAsync(c => c.ID== request.ID);
-            //if (candidate == null)
-            //{
-            //    throw new Exception("Record doesn't exist");
-            //}
 
             return candidatesById;
         }
