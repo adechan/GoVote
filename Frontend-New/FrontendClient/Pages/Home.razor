@@ -1,0 +1,31 @@
+﻿@page "/home"
+@inject NavigationManager NavigationManager
+
+<NavMenuBar />
+<div class="w-100 h-100 pt-5">
+    <div class="row align-items-center boxScreen pt-5">
+        <div class="col align-items-center cardHome">
+            <a href="#" class="cardSpanText" @onclick="NavigateToCandidates">Alegeri Prezidentiale </a>
+        </div>
+        <div class="col align-items-center cardHome">
+            <span class="cardSpanText">Alegeri Parlamentare </span>
+        </div>
+        <div class="col align-items-center cardHome">
+            <span class="cardSpanText">Alegeri Locale </span>
+        </div>
+    </div>
+</div>
+
+<BottomBar />
+
+@code
+{
+    public void NavigateToCandidates()
+    {
+        NavigationManager.NavigateTo("/candidates", true);
+    }
+}
+
+
+
+
