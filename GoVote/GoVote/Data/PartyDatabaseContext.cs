@@ -20,8 +20,7 @@ namespace GoVote.Data
 
             // Seed Method
             modelBuilder.Entity<Party>().HasData(
-                Party.Create("Cool Cats Political Party"),
-                Party.Create("PNL"));
+                Party.Create("Cool Cats Political Party"));
         }
     }
 }

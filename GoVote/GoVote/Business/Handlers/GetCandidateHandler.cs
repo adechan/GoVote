@@ -19,7 +19,7 @@ namespace GoVote.Business.Handlers
         }
         public async Task<Candidate> Handle(GetCandidateDetail request, CancellationToken cancellationToken)
         {
-            var candidate = await context.Candidates.SingleOrDefaultAsync(c => c.ID == request.ID);
+            var candidate = await context.Candidates.SingleOrDefaultAsync(c => c.ID== request.ID);
             if (candidate == null)
             {
                 throw new Exception("Record doesn't exist");

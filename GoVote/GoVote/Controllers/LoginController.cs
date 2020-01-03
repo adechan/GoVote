@@ -18,12 +18,10 @@ namespace GoVote.Controllers
         }
 
 
-        [HttpGet]
+        [HttpPost]
         public async Task<ActionResult<Citizen>> Login([FromBody]CNPContainer container)
         {
             var cnp = await _mediator.Send(container);
-            //return todo;
-            //var cnp = context.Citizens.SingleOrDefault(c => c.CNP == container.CNP);
             if (cnp == null)
                 return NotFound();
             return Ok(cnp);

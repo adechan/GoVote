@@ -20,8 +20,8 @@ namespace GoVote.Business.Handlers
 
         public async Task<List<Candidate>> Handle(GetCandidates request, CancellationToken cancellationToken)
         {
-            var candidates = await _context.Candidates.ToListAsync();
-            return candidates;
+            var candiates = await _context.Candidates.ToListAsync();
+            return candiates;
         }
 
     }
