@@ -26,7 +26,7 @@ namespace GoVote
                options.UseSqlServer(@"Server=.\SQLEXPRESS; Database=CitizenDatabaseContext;Trusted_Connection=True;")
            );
 
-            services.AddDbContext<Data.PartyDatabaseContext>(options =>
+           services.AddDbContext<Data.PartyDatabaseContext>(options =>
                options.UseSqlServer(@"Server=.\SQLEXPRESS; Database=PartyDatabaseContext;Trusted_Connection=True;")
            );
 
@@ -34,8 +34,9 @@ namespace GoVote
                options.UseSqlServer(@"Server=.\SQLEXPRESS; Database=CandidateDatabaseContext;Trusted_Connection=True;")
            );
 
-
-
+            services.AddDbContext<Data.VotingTypeDatabaseContext>(options =>
+               options.UseSqlServer(@"Server=.\SQLEXPRESS; Database=VotingTypeDatabaseContext;Trusted_Connection=True;")
+           );
             services.AddMediatR(Assembly.GetExecutingAssembly());
         }
 
