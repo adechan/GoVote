@@ -25,6 +25,23 @@ namespace GoVote
             services.AddDbContext<Data.CitizenDatabaseContext>(options =>
                options.UseSqlServer(@"Server=.\SQLEXPRESS; Database=CitizenDatabaseContext;Trusted_Connection=True;")
            );
+<<<<<<< Updated upstream
+=======
+
+            services.AddDbContext<Data.PartyDatabaseContext>(options =>
+               options.UseSqlServer(@"Server=.\SQLEXPRESS; Database=PartyDatabaseContext;Trusted_Connection=True;")
+           );
+
+            services.AddDbContext<Data.CandidateDatabaseContext>(options =>
+               options.UseSqlServer(@"Server=.\SQLEXPRESS; Database=CandidateDatabaseContext;Trusted_Connection=True;")
+           );
+            services.AddDbContext<Data.VotingTypeDatabaseContext>(options =>
+               options.UseSqlServer(@"Server=.\SQLEXPRESS; Database=VotingTypeDatabaseContext;Trusted_Connection=True;")
+           );
+
+
+
+>>>>>>> Stashed changes
             services.AddMediatR(Assembly.GetExecutingAssembly());
         }
 

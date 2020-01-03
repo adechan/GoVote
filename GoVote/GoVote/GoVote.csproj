@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+<<<<<<< Updated upstream
+=======
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <StartupObject></StartupObject>
+>>>>>>> Stashed changes
   </PropertyGroup>
 
   <ItemGroup>
