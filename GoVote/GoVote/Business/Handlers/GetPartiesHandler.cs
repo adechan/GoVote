@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GoVote.Business.Handlers
 {
-    public class GetPartiesHandler : IRequestHandler<GetParties, Dictionary<string, string>>
+    public class GetPartiesHandler : IRequestHandler<GetParties, List<Party>>
     {
         private readonly PartyDatabaseContext _context;
 
@@ -16,18 +16,11 @@ namespace GoVote.Business.Handlers
         {
             _context = context;
         }
-        public async Task<Dictionary<string, string>> Handle(GetParties request, CancellationToken cancellationToken)
+        public async Task<List<Party>> Handle(GetParties request, CancellationToken cancellationToken)
         {
 
             var parties = await _context.Parties.ToListAsync();
-            var partiesName = new Dictionary<string, string>();
-
-            foreach (Party party in parties)
-            {
-                partiesName.Add("PartyName", party.PartyName);
-            }
-
-            return partiesName;
+            return parties;
         }
 
     }

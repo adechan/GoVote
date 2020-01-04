@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GoVote.Business.Handlers
 {
-    public class GetCandidatesHandler : IRequestHandler<GetCandidates, List<Candidate>>
+    public class GetCandidatesHandler : IRequestHandler<GetCandidates, List<CandidateSimple>>
     {
 
         private readonly CandidateDatabaseContext _context;
@@ -18,10 +18,15 @@ namespace GoVote.Business.Handlers
             _context = context;
         }
 
-        public async Task<List<Candidate>> Handle(GetCandidates request, CancellationToken cancellationToken)
+        public async Task<List<CandidateSimple>> Handle(GetCandidates request, CancellationToken cancellationToken)
         {
-            var candiates = await _context.Candidates.ToListAsync();
-            return candiates;
+            var candidates = await _context.Candidates.ToListAsync();
+            List<CandidateSimple> simpleCandidates = new List<CandidateSimple>();
+
+            foreach (Candidate candidate in candidates)
+                simpleCandidates.Add(new CandidateSimple(candidate));
+
+            return simpleCandidates;
         }
 
     }
