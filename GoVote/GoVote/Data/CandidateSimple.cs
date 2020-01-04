@@ -6,16 +6,16 @@ namespace GoVote.Data
     { 
         public CandidateSimple(Guid id, string firstName, string lastName)
         {
-            this.ID = id;
-            this.FirstName = firstName;
-            this.LastName = lastName;
+            ID = id;
+            FirstName = firstName;
+            LastName = lastName;
         }
 
         public CandidateSimple(Candidate candidate)
         {
-            this.ID = candidate.ID;
-            this.FirstName = candidate.FirstName;
-            this.LastName = candidate.LastName;
+            ID = candidate.ID;
+            FirstName = candidate.FirstName;
+            LastName = candidate.LastName;
         }
 
         public Guid ID { get; private set; }

@@ -2,7 +2,6 @@
 using GoVote.DTO;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -37,12 +36,6 @@ namespace GoVote.Business.Handlers
 
             var partyNameList = partyName.ToList();
 
-            string listString = "";
-            foreach (var party in partyNameList)
-                listString += party.Party + ", ";
-
-            System.Diagnostics.Debug.WriteLine("partyNameList: " + listString);
-
             foreach (Candidate candidate in candidates)
             {
                 if (candidate == candidateRequest)
@@ -64,11 +57,6 @@ namespace GoVote.Business.Handlers
                 }
             }
 
-            string listString2 = "";
-            foreach (var id in candidatesById)
-                listString2 += id.Key + ": " + id.Value + ", ";
-
-            System.Diagnostics.Debug.WriteLine("Candidate: " + listString2);
             return candidatesById;
         }
     }

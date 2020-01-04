@@ -15,8 +15,30 @@ namespace GoVote.Data
                 Sex = sex,
                 Address = address,
                 County = county,
-                City = city
+                City = city,
+                VotedFor = new Guid("0")
             };
+        }
+
+        public static Citizen Create(string cnp, string lastName, string firstName, string sex, string address, string county, string city, Guid votedFor)
+        {
+            return new Citizen
+            {
+                ID = Guid.NewGuid(),
+                CNP = cnp,
+                LastName = lastName,
+                FirstName = firstName,
+                Sex = sex,
+                Address = address,
+                County = county,
+                City = city,
+                VotedFor = votedFor
+            };
+        }
+
+        public bool hasVoted()
+        {
+            return this.VotedFor != new Guid("0");
         }
 
         public Guid ID { get; private set; }
@@ -34,6 +56,7 @@ namespace GoVote.Data
         public string County { get; private set; }
 
         public string City { get; private set; }
+        public Guid VotedFor { get; private set; }
 
     }
 }
