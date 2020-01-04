@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace GoVote.Data
 {
@@ -22,11 +23,13 @@ namespace GoVote.Data
                 e.Property(t => t.Address).IsRequired();
                 e.Property(t => t.County).IsRequired();
                 e.Property(t => t.City).IsRequired();
+                e.Property(t => t.VotedFor);
             });
 
             // Seed Method
             modelBuilder.Entity<Citizen>().HasData(
-                Citizen.Create("1234567891234", "MEOWt Lastname", "Cat Firstname", "Female", "Cat address", "Cat county", "Cat City"));
+                //Citizen.Create("1234567891234", "MEOWt Lastname", "Cat Firstname", "Female", "Cat address", "Cat county", "Cat City"));
+                Citizen.Create("6000611068050", "Rindasu", "Andreea", "Female", "Prelungirea Salciei nr 11", "Bacau", "Bacau", new Guid("8C014A9D-C44B-42DA-8EEB-21EDEB756842")));
         }
 
     }
