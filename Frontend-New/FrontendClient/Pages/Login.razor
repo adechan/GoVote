@@ -1,0 +1,32 @@
+﻿@page "/"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<div class="d-flex align-items-center flex-column justify-content-center w-100 h-100 cont">
+    <h1 class="text-center text-uppercase">Votul tau conteaza!</h1>
+    <div id="formContent" class="rounded w-90 position-relative text-center">
+        
+        <input type="number" id="login" class="fadeIn text text-center d-inline w-85" name="login" @bind="cnp" autocomplete="off" placeholder="Introduceti CNP">
+        <input @onclick="SendCnp" class="fadeIn" value="Log In">
+        
+    </div>
+</div>
+
+
+
+@code {
+    private string cnp;
+
+    private string apiUrl = "https://localhost:44380/api/login";
+
+    private void SendCnp()
+    {
+        var response = Http.PostJsonAsync(apiUrl, cnp);
+
+        if(response.IsCompletedSuccessfully)
+        {
+            NavigationManager.NavigateTo("/home", true);
+        }
+
+    }
+}
