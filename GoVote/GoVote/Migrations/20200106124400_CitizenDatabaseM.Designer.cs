@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GoVote.Migrations
 {
     [DbContext(typeof(CitizenDatabaseContext))]
-    [Migration("20200106081240_Citizens")]
-    partial class Citizens
+    [Migration("20200106124400_CitizenDatabaseM")]
+    partial class CitizenDatabaseM
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -65,7 +65,7 @@ namespace GoVote.Migrations
                     b.HasData(
                         new
                         {
-                            ID = new Guid("e9c364a1-4d25-4568-826b-9790fe078d9c"),
+                            ID = new Guid("79923d83-a092-443b-8120-6e8466925abc"),
                             Address = "Prelungirea Salciei nr 11",
                             CNP = "6000611068050",
                             City = "Bacau",
@@ -73,7 +73,7 @@ namespace GoVote.Migrations
                             FirstName = "Andreea",
                             LastName = "Rindasu",
                             Sex = "Female",
-                            VotedFor = new Guid("8c014a9d-c44b-42da-8eeb-21edeb756842")
+                            VotedFor = new Guid("3a727820-76a9-4ae6-a465-260ea87a56a0")
                         });
                 });
 #pragma warning restore 612, 618

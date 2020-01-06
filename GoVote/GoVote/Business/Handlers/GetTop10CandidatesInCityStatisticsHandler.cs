@@ -41,14 +41,22 @@ namespace GoVote.Business.Handlers
                 if (!citizen.hasVoted())
                     continue;
 
-                var candidate = candidateNameList.Where(c => c.Citizen == citizen.VotedFor).ElementAt(0);
-                statistics[candidate.Candidate] += 1; 
+                var citizenCandidateList = candidateNameList.Where(c => c.Citizen == citizen.VotedFor);
+                if (citizenCandidateList.Count() == 0)
+                    continue;
+
+                var candidate = citizenCandidateList.ElementAt(0);
+
+                if (!statistics.ContainsKey(candidate.Candidate))
+                    statistics[candidate.Candidate] = 1;
+                else
+                    statistics[candidate.Candidate] += 1;
             }
 
             var statisticsList = statistics.ToList();
             statisticsList.Sort((count1, count2) => count1.Value.CompareTo(count2.Value));
 
-            var top10List = statisticsList.Take(1);
+            var top10List = statisticsList.Take(10);
             return top10List.ToDictionary(x => x.Key, x => x.Value);
 
         }

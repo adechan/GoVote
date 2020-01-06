@@ -3,6 +3,7 @@ using GoVote.DTO;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,7 +18,7 @@ namespace GoVote.Business.Handlers
             _context = context;
         }
         public async Task<List<VotingType>> Handle(GetVotingTypes request, CancellationToken cancellationToken)
-        {
+        { 
             var votingTypes = await _context.VotingTypes.ToListAsync();
             //await _context.SaveChangesAsync(cancellationToken);
             return votingTypes;
