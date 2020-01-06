@@ -7,7 +7,7 @@
     <div id="formContent" class="rounded w-90 position-relative text-center">
         
         <input type="number" id="login" class="fadeIn text text-center d-inline w-85" name="login" @bind="cnp" autocomplete="off" placeholder="Introduceti CNP">
-        <input @onclick="SendCnp" class="fadeIn" value="Log In">
+        <input @onclick="SendCnp" class="fadeIn login" value="Log In">
         
     </div>
 </div>
@@ -19,14 +19,36 @@
 
     private string apiUrl = "https://localhost:44380/api/login";
 
-    private void SendCnp()
+    protected async Task SendCnp()
     {
-        var response = Http.PostJsonAsync(apiUrl, cnp);
 
-        if(response.IsCompletedSuccessfully)
-        {
+        var request = new Dictionary<string, string>();
+        request["cnp"] = cnp;
+
+        Citizen response = await Http.PostJsonAsync<Citizen>(apiUrl, request);
+
+        if (response.CNP == "6000611068050")
+
             NavigationManager.NavigateTo("/home", true);
-        }
+    }
 
+    public class Citizen
+    {
+        public Guid ID { get; set; }
+
+        public string CNP { get; set; }
+
+        public string LastName { get; set; }
+
+        public string FirstName { get; set; }
+
+        public string Sex { get; set; }
+
+        public string Address { get; set; }
+
+        public string County { get; set; }
+
+        public string City { get; set; }
+        public Guid VotedFor { get; set; }
     }
 }

@@ -48,7 +48,7 @@ namespace GoVote.Business.Handlers
             var statisticsList = statistics.ToList();
             statisticsList.Sort((count1, count2) => count1.Value.CompareTo(count2.Value));
 
-            var top10List = statisticsList.Take(10);
+            var top10List = statisticsList.Take(1);
             return top10List.ToDictionary(x => x.Key, x => x.Value);
 
         }

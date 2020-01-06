@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace GoVote.Business.Handlers
 {
-    public class GetAge31_60StatisticsHandler : IRequestHandler<GetAge18_30Statistics, Dictionary<string, float>>
+    public class GetAge31_60StatisticsHandler : IRequestHandler<GetAge31_60Statistics, Dictionary<string, float>>
     {
         private readonly CitizenDatabaseContext _context;
 
@@ -19,7 +19,7 @@ namespace GoVote.Business.Handlers
             _context = context;
         }
 
-        public async Task<Dictionary<string, float>> Handle(GetAge18_30Statistics request, CancellationToken cancellationToken)
+        public async Task<Dictionary<string, float>> Handle(GetAge31_60Statistics request, CancellationToken cancellationToken)
         {
             var citizens = await _context.Citizens.ToListAsync();
             var statistics = new Dictionary<string, float>();
@@ -46,8 +46,8 @@ namespace GoVote.Business.Handlers
                 }
             }
 
-            statistics["maleVotes"] = listCitizen.Where(c => c.VotedFor != new System.Guid("0") && c.Sex == "Male").Count();
-            statistics["femaleVotes"] = listCitizen.Where(c => c.VotedFor != new System.Guid("0") && c.Sex == "Female").Count();
+            statistics["maleVotes"] = listCitizen.Where(c => c.VotedFor != new System.Guid("00000000-0000-0000-0000-000000000000") && c.Sex == "Male").Count();
+            statistics["femaleVotes"] = listCitizen.Where(c => c.VotedFor != new System.Guid("00000000-0000-0000-0000-000000000000") && c.Sex == "Female").Count();
 
             return statistics;
         }

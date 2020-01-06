@@ -26,8 +26,8 @@ namespace GoVote.Business.Handlers
 
             var citizensInCounty = citizens.Where(c => c.County == request.County);
 
-            statistics["maleVotes"] = citizensInCounty.Where(c => c.VotedFor != new System.Guid("0") && c.Sex == "Male").Count();
-            statistics["femaleVotes"] = citizensInCounty.Where(c => c.VotedFor != new System.Guid("0") && c.Sex == "Female").Count();
+            statistics["maleVotes"] = citizensInCounty.Where(c => c.VotedFor != new System.Guid("00000000-0000-0000-0000-000000000000") && c.Sex == "Male").Count();
+            statistics["femaleVotes"] = citizensInCounty.Where(c => c.VotedFor != new System.Guid("00000000-0000-0000-0000-000000000000") && c.Sex == "Female").Count();
 
             return statistics;
         }
