@@ -1,3 +1,19 @@
-﻿<nav class="navbar navbar-light cardNavBar">
-    <span class="navbar-brand mb-0 h1">Navbar</span>
+﻿@inject NavigationManager NavigationManager
+
+<nav class="navbar navbar-light cardNavBar">
+    <a href="#"  @onclick="NavigateToHome">Home</a>
+    <a href="#" @onclick="NavigateToLogin">Log Out</a>
 </nav>
+
+@code
+{
+    public void NavigateToHome()
+    {
+        NavigationManager.NavigateTo("/home", true);
+    }
+
+    public void NavigateToLogin()
+    {
+        NavigationManager.NavigateTo("/", true);
+    }
+}

@@ -53,6 +53,9 @@ namespace GoVote.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("VotedFor")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("ID");
 
                     b.ToTable("Citizens");
@@ -60,14 +63,15 @@ namespace GoVote.Migrations
                     b.HasData(
                         new
                         {
-                            ID = new Guid("f8c6a385-03f5-4d72-9f85-809115987e95"),
-                            Address = "Cat address",
-                            CNP = "1234567891234",
-                            City = "Cat City",
-                            County = "Cat county",
-                            FirstName = "Cat Firstname",
-                            LastName = "MEOWt Lastname",
-                            Sex = "Female"
+                            ID = new Guid("e9c364a1-4d25-4568-826b-9790fe078d9c"),
+                            Address = "Prelungirea Salciei nr 11",
+                            CNP = "6000611068050",
+                            City = "Bacau",
+                            County = "Bacau",
+                            FirstName = "Andreea",
+                            LastName = "Rindasu",
+                            Sex = "Female",
+                            VotedFor = new Guid("8c014a9d-c44b-42da-8eeb-21edeb756842")
                         });
                 });
 #pragma warning restore 612, 618
