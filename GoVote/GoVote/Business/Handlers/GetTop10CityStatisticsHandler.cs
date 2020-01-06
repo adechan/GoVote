@@ -25,13 +25,18 @@ namespace GoVote.Business.Handlers
 
             foreach (Citizen citizen in citizens)
             {
-                statistics[citizen.City] += 1; 
+                if (!statistics.ContainsKey(citizen.City))
+                {
+                    statistics[citizen.City] = 1;
+                }
+                else
+                    statistics[citizen.City] += 1; 
             }
 
             var statisticsList = statistics.ToList();
             statisticsList.Sort((count1, count2) => count1.Value.CompareTo(count2.Value));
 
-            var top10List = statisticsList.Take(1);
+            var top10List = statisticsList.Take(10);
             return top10List.ToDictionary(x => x.Key, x => x.Value);
         }
     }

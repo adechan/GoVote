@@ -21,6 +21,11 @@ namespace GoVote.Business.Handlers
 
         public async Task<Dictionary<string, float>> Handle(GetAge18_30Statistics request, CancellationToken cancellationToken)
         {
+            
+            //bool loggedIn = await _login_context.IsLoggedIn(request.Token);
+            //if (!loggedIn)
+            //    throw new ArgumentException("Invalid LoginToken: " + request.Token);
+
             var citizens = await _context.Citizens.ToListAsync();
             var statistics = new Dictionary<string, float>();
             List<Citizen> listCitizen = new List<Citizen>();

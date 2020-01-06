@@ -39,6 +39,11 @@ namespace GoVote
             services.AddDbContext<Data.VotingTypeDatabaseContext>(options =>
                options.UseSqlServer(@"Server=.\SQLEXPRESS; Database=VotingTypeDatabaseContext;Trusted_Connection=True;")
            );
+
+            services.AddDbContext<Data.LoginTokenDatabaseContext>(options =>
+              options.UseSqlServer(@"Server=.\SQLEXPRESS; Database=LoginTokenDatabaseContext;Trusted_Connection=True;")
+          );
+
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddCors(options =>
             {

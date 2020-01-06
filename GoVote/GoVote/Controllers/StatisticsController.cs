@@ -94,7 +94,7 @@ namespace GoVote.Controllers
             return Ok(statistics);
         }
 
-        [HttpGet("top10/{city}")]
+        [HttpGet("top10candidates/{city}")]
         public async Task<ActionResult<Citizen>> GetTop10CandidatesInCityStatistics(string city)
         {
             var statistics = await _mediator.Send(new GetTop10CandidatesInCityStatistics(city));

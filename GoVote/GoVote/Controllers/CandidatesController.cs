@@ -21,23 +21,38 @@ namespace GoVote.Controllers
         [HttpGet]
         public async Task<ActionResult<Candidate>> GetCandidates()
         {
-            var candidates = await _mediator.Send(new GetCandidates());
-            if (candidates == null)
+            try
             {
-                return NotFound();
+                var candidates = await _mediator.Send(new GetCandidates());
+
+                if (candidates == null)
+                {
+                    return NotFound();
+                }
+                return Ok(candidates);
             }
-            return Ok(candidates);
+            catch (Exception e)
+            {
+                return NotFound(e);
+            }
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Candidate>> GetCandidateById(Guid id)
         {
-            var candidate = await _mediator.Send(new GetCandidateDetail(id));
-            if (candidate == null)
+            try
             {
-                return NotFound();
+                var candidate = await _mediator.Send(new GetCandidateDetail(id));
+                if (candidate == null)
+                {
+                    return NotFound();
+                }
+                return Ok(candidate);
             }
-            return Ok(candidate);
+            catch (Exception e)
+            {
+                return NotFound(e);
+            }
         }
     }
 }

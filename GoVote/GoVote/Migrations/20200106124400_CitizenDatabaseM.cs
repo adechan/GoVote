@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GoVote.Migrations
 {
-    public partial class Citizens : Migration
+    public partial class CitizenDatabaseM : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -29,7 +29,7 @@ namespace GoVote.Migrations
             migrationBuilder.InsertData(
                 table: "Citizens",
                 columns: new[] { "ID", "Address", "CNP", "City", "County", "FirstName", "LastName", "Sex", "VotedFor" },
-                values: new object[] { new Guid("e9c364a1-4d25-4568-826b-9790fe078d9c"), "Prelungirea Salciei nr 11", "6000611068050", "Bacau", "Bacau", "Andreea", "Rindasu", "Female", new Guid("8c014a9d-c44b-42da-8eeb-21edeb756842") });
+                values: new object[] { new Guid("79923d83-a092-443b-8120-6e8466925abc"), "Prelungirea Salciei nr 11", "6000611068050", "Bacau", "Bacau", "Andreea", "Rindasu", "Female", new Guid("3a727820-76a9-4ae6-a465-260ea87a56a0") });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
