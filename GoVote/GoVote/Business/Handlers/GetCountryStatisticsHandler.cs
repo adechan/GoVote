@@ -22,8 +22,8 @@ namespace GoVote.Business.Handlers
             var citizens = await _context.Citizens.ToListAsync();
             var statistics = new Dictionary<string, float>();
 
-            statistics["maleVotes"] = citizens.FindAll(c => c.VotedFor != new System.Guid("0") && c.Sex == "Male").Count;
-            statistics["femaleVotes"] = citizens.FindAll(c => c.VotedFor != new System.Guid("0") && c.Sex == "Female").Count;
+            statistics["maleVotes"] = citizens.FindAll(c => c.VotedFor != new System.Guid("00000000-0000-0000-0000-000000000000") && c.Sex == "Male").Count;
+            statistics["femaleVotes"] = citizens.FindAll(c => c.VotedFor != new System.Guid("00000000-0000-0000-0000-000000000000") && c.Sex == "Female").Count;
             return statistics;
         }
     }

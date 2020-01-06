@@ -16,7 +16,7 @@ namespace GoVote.Data
                 Address = address,
                 County = county,
                 City = city,
-                VotedFor = new Guid("0")
+                VotedFor = new Guid("00000000-0000-0000-0000-000000000000")
             };
         }
 
@@ -38,7 +38,7 @@ namespace GoVote.Data
 
         public bool hasVoted()
         {
-            return this.VotedFor != new Guid("0");
+            return this.VotedFor != new Guid("00000000-0000-0000-0000-000000000000");
         }
 
         public Guid ID { get; private set; }

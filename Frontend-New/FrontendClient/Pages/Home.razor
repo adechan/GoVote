@@ -1,18 +1,25 @@
 ﻿@page "/home"
+@inject HttpClient Http
 @inject NavigationManager NavigationManager
 
 <NavMenuBar />
 <div class="w-100 h-100 pt-5">
     <div class="row align-items-center boxScreen pt-5">
-        <div class="col align-items-center cardHome">
-            <a href="#" class="cardSpanText" @onclick="NavigateToCandidates">Alegeri Prezidentiale </a>
-        </div>
-        <div class="col align-items-center cardHome">
-            <span class="cardSpanText">Alegeri Parlamentare </span>
-        </div>
-        <div class="col align-items-center cardHome">
-            <span class="cardSpanText">Alegeri Locale </span>
-        </div>
+        @if (types == null)
+        {
+            <p>No voting types</p>
+        }
+        else
+        {
+            @foreach (var item in types)
+            {
+
+                <div class="col align-items-center cardHome">
+                    <a href="#" class="cardSpanText" @onclick="NavigateToCandidates">@item.votingTypeName</a>
+                </div>
+
+            }
+        }
     </div>
 </div>
 
@@ -20,6 +27,24 @@
 
 @code
 {
+    public class VotingType
+    {
+        public Guid votingTypeID { get; set; }
+
+        public Guid candidateID { get; set; }
+
+        public string votingTypeName { get; set; }
+    }
+
+    private VotingType[] types;
+
+    private string apiUrl = "https://localhost:44380/api/votingtype";
+
+    protected override async Task OnInitializedAsync()
+    {
+        types = await Http.GetJsonAsync<VotingType[]>(apiUrl);
+    }
+
     public void NavigateToCandidates()
     {
         NavigationManager.NavigateTo("/candidates", true);

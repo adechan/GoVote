@@ -28,7 +28,7 @@ namespace GoVote.Controllers
             return Ok(statistics);
         }
 
-        [HttpGet("{county}")]
+        [HttpGet("county/{county}")]
         public async Task<ActionResult<Citizen>> GetCountyStatistics(string county)
         {
             var statistics = await _mediator.Send(new GetCountyStatistics(county));

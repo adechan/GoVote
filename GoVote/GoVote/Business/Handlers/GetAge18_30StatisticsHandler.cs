@@ -40,8 +40,8 @@ namespace GoVote.Business.Handlers
                 }
             }
 
-            statistics["maleVotes"] = listCitizen.Where(c => c.VotedFor != new System.Guid("0") && c.Sex == "Male").Count();
-            statistics["femaleVotes"] = listCitizen.Where(c => c.VotedFor != new System.Guid("0") && c.Sex == "Female").Count();
+            statistics["maleVotes"] = listCitizen.Where(c => c.VotedFor != new System.Guid("00000000-0000-0000-0000-000000000000") && c.Sex == "Male").Count();
+            statistics["femaleVotes"] = listCitizen.Where(c => c.VotedFor != new System.Guid("00000000-0000-0000-0000-000000000000") && c.Sex == "Female").Count();
 
             return statistics;
         }
