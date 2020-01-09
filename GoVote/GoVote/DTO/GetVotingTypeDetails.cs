@@ -15,7 +15,7 @@ namespace GoVote.DTO
         }
         public Guid ID { get; }
     }*/
-    public class GetVotingTypeDetails : IRequest<Dictionary<string, Guid>>
+    public class GetVotingTypeDetails : IRequest<List<Dictionary<string, string>>>
     {
         public GetVotingTypeDetails(Guid id)
         {
