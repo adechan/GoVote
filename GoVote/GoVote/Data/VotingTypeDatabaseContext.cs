@@ -15,12 +15,12 @@ namespace GoVote.Data
             modelBuilder.Entity<VotingType>(e =>
             {
                 e.Property(t => t.VotingTypeName).IsRequired();
-                e.Property(t => t.CandidateID).IsRequired();
             });
 
             //Seed Method
             modelBuilder.Entity<VotingType>().HasData(
-                VotingType.Create("Alegeri prezidentiale", new Guid("9e1bd44b-eb0c-4758-96f7-582ef41997fe"))
+                VotingType.Create("Alegeri prezidentiale"),
+                VotingType.Create("Alegeri parlamentare")
             );
         }
     }

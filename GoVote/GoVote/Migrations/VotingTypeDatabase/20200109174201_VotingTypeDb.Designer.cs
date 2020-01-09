@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GoVote.Migrations.VotingTypeDatabase
 {
     [DbContext(typeof(VotingTypeDatabaseContext))]
-    [Migration("20191228160952_voting")]
-    partial class voting
+    [Migration("20200109174201_VotingTypeDb")]
+    partial class VotingTypeDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,9 +27,6 @@ namespace GoVote.Migrations.VotingTypeDatabase
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("CandidateID")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("VotingTypeName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -41,9 +38,13 @@ namespace GoVote.Migrations.VotingTypeDatabase
                     b.HasData(
                         new
                         {
-                            VotingTypeID = new Guid("e3bac7ed-49ba-4ab1-ba48-8720e7b456ad"),
-                            CandidateID = new Guid("9e1bd44b-eb0c-4758-96f7-582ef41997fe"),
+                            VotingTypeID = new Guid("8254d087-4ad7-4069-816f-5ed97d119716"),
                             VotingTypeName = "Alegeri prezidentiale"
+                        },
+                        new
+                        {
+                            VotingTypeID = new Guid("ae040cc6-c820-4f54-8173-0510907c04ee"),
+                            VotingTypeName = "Alegeri parlamentare"
                         });
                 });
 #pragma warning restore 612, 618
