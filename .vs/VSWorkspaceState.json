@@ -3,9 +3,12 @@
     "",
     "\\GoVote",
     "\\GoVote\\GoVote",
+    "\\GoVote\\GoVote\\Business",
+    "\\GoVote\\GoVote\\Business\\Handlers",
     "\\View",
-    "\\View\\Frontend"
+    "\\View\\Frontend",
+    "\\View\\Frontend\\Pages"
   ],
-  "SelectedNode": "\\View",
+  "SelectedNode": "\\GoVote\\GoVote\\GoVote.sln",
   "PreviewInSolutionExplorer": false
 }

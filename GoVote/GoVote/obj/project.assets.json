@@ -6532,19 +6532,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {}
+    "C:\\Users\\Andreea\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\facultate_an_3\\NET\\GoVote\\GoVote\\GoVote\\GoVote.csproj",
+      "projectUniqueName": "C:\\Users\\Andreea\\Desktop\\GoVote\\GoVote\\GoVote\\GoVote.csproj",
       "projectName": "GoVote",
-      "projectPath": "D:\\facultate_an_3\\NET\\GoVote\\GoVote\\GoVote\\GoVote.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "D:\\facultate_an_3\\NET\\GoVote\\GoVote\\GoVote\\obj\\",
+      "projectPath": "C:\\Users\\Andreea\\Desktop\\GoVote\\GoVote\\GoVote\\GoVote.csproj",
+      "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Andreea\\Desktop\\GoVote\\GoVote\\GoVote\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6625,16 +6629,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.0.1, 3.0.1]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.0.1, 3.0.1]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -6643,7 +6637,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },
