@@ -28,7 +28,10 @@ namespace GoVote.Data
 
             // Seed Method
             modelBuilder.Entity<Citizen>().HasData(
-               Citizen.Create("6000611068050", "Rindasu", "Andreea", "Female", "Prelungirea Salciei nr 11", "Bacau", "Bacau", new Guid("3A727820-76A9-4AE6-A465-260EA87A56A0")));
+               Citizen.Create("6000611068050", "Rindasu", "Andreea", "Female", "Prelungirea Salciei nr 11", "Bacau", "Bacau", new Guid("3A727820-76A9-4AE6-A465-260EA87A56A0")),
+               Citizen.Create("2940306114529", "Arsene", "Andreea", "Female", "Trandafirilor nr 19", "Iasi", "Iasi")
+               );
+                
         }
 
     }

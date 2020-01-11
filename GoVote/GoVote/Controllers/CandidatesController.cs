@@ -55,12 +55,12 @@ namespace GoVote.Controllers
             }
         }
 
-        [HttpPut("{idCitizen}/ {idCandidate}")]
-        public async Task<ActionResult<Candidate>> UpdateVote(Guid idCitizen, Guid idCandidate)
+        [HttpPut("vote")]
+        public async Task<ActionResult<Candidate>> UpdateVote([FromBody] GetVote container)
         {
             try
             {
-                var result = await _mediator.Send(new GetVote(idCitizen, idCandidate));
+                var result = await _mediator.Send(container);
                 if (result == null)
                 {
                     return NotFound();
