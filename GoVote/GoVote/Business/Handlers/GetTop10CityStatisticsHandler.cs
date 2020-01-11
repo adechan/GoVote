@@ -25,12 +25,16 @@ namespace GoVote.Business.Handlers
 
             foreach (Citizen citizen in citizens)
             {
-                if (!statistics.ContainsKey(citizen.City))
+                if (citizen.VotedFor != new System.Guid("00000000-0000-0000-0000-000000000000"))
                 {
-                    statistics[citizen.City] = 1;
+                    if (!statistics.ContainsKey(citizen.City))
+                    {
+                        statistics[citizen.City] = 1;
+                    }
+                    else
+                        statistics[citizen.City] += 1;
                 }
-                else
-                    statistics[citizen.City] += 1; 
+               
             }
 
             var statisticsList = statistics.ToList();
