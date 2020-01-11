@@ -1,7 +1,6 @@
 D:\facultate_an_3\NET\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.csprojAssemblyReference.cache
 D:\facultate_an_3\NET\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\staticwebassets\GoVote.StaticWebAssets.Manifest.cache
 D:\facultate_an_3\NET\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\staticwebassets\GoVote.StaticWebAssets.xml
-D:\facultate_an_3\NET\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.MvcApplicationPartsAssemblyInfo.cache
 D:\facultate_an_3\NET\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.AssemblyInfoInputs.cache
 D:\facultate_an_3\NET\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.AssemblyInfo.cs
 D:\facultate_an_3\NET\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.dll
@@ -199,7 +198,6 @@ D:\facultate_an_3\NET\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\Newtonsoft.Js
 D:\facultate_an_3\NET\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\facultate_an_3\NET\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\facultate_an_3\NET\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\facultate_an_3\NET\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Andreea\Desktop\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\appsettings.Development.json
 C:\Users\Andreea\Desktop\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\appsettings.json
 C:\Users\Andreea\Desktop\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
@@ -270,3 +268,7 @@ C:\Users\Andreea\Desktop\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.dll
 C:\Users\Andreea\Desktop\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.pdb
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.MvcApplicationPartsAssemblyInfo.cache
+D:\facultate_an_3\NET\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\System.IdentityModel.Tokens.Jwt.dll
+D:\facultate_an_3\NET\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\facultate_an_3\NET\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Logging.dll
+D:\facultate_an_3\NET\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Tokens.dll

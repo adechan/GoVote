@@ -1,12 +1,9 @@
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using GoVote.Data;
 using GoVote.DTO;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace GoVote.Business.Handlers
@@ -24,7 +21,7 @@ namespace GoVote.Business.Handlers
 
         public async Task<Citizen> Handle(GetVote request, CancellationToken cancellationToken)
         {
-            var citizen = _context.Citizens.SingleOrDefault(c => c.ID ==request.CitizenID);
+            var citizen = _context.Citizens.SingleOrDefault(c => c.ID == request.CitizenID);
             var candidate = _contextC.Candidates.SingleOrDefault(c => c.ID == request.CandidateID);
 
             Debug.WriteLine("REQUEST Citizen ID " + request.CitizenID);
@@ -34,7 +31,6 @@ namespace GoVote.Business.Handlers
             {
                 citizen.Update(request.CandidateID);
                 await _context.SaveChangesAsync(cancellationToken);
-
             }
 
             return citizen;
