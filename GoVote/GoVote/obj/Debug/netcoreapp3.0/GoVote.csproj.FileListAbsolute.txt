@@ -109,7 +109,6 @@ C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcore
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.dll
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.pdb
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.csprojAssemblyReference.cache
-C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.MvcApplicationPartsAssemblyInfo.cache
 F:\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\appsettings.Development.json
 F:\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\appsettings.json
 F:\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
@@ -188,7 +187,6 @@ C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\bin\Debug\netcore
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.MvcApplicationPartsAssemblyInfo.cs
 D:\facultate_an_3\NET\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 D:\facultate_an_3\NET\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\facultate_an_3\NET\GoVote\GoVote\GoVote\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
@@ -270,3 +268,5 @@ C:\Users\Andreea\Desktop\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.Raz
 C:\Users\Andreea\Desktop\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.csproj.CopyComplete
 C:\Users\Andreea\Desktop\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.dll
 C:\Users\Andreea\Desktop\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.pdb
+C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Andreea Rindasu\Documents\GitHub\GoVote\GoVote\GoVote\obj\Debug\netcoreapp3.0\GoVote.MvcApplicationPartsAssemblyInfo.cache
