@@ -31,6 +31,8 @@ namespace GoVote.Controllers
             }
             return Ok(votingTypes);
         }
+
+
         [HttpGet("{id}")]
         public async Task<ActionResult<VotingType>> GetVotingTypeById(Guid id)
         {

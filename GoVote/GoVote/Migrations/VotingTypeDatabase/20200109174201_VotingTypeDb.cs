@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GoVote.Migrations.VotingTypeDatabase
 {
-    public partial class voting : Migration
+    public partial class VotingTypeDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,6 @@ namespace GoVote.Migrations.VotingTypeDatabase
                 columns: table => new
                 {
                     VotingTypeID = table.Column<Guid>(nullable: false),
-                    CandidateID = table.Column<Guid>(nullable: false),
                     VotingTypeName = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
@@ -22,8 +21,13 @@ namespace GoVote.Migrations.VotingTypeDatabase
 
             migrationBuilder.InsertData(
                 table: "VotingTypes",
-                columns: new[] { "VotingTypeID", "CandidateID", "VotingTypeName" },
-                values: new object[] { new Guid("e3bac7ed-49ba-4ab1-ba48-8720e7b456ad"), new Guid("9e1bd44b-eb0c-4758-96f7-582ef41997fe"), "Alegeri prezidentiale" });
+                columns: new[] { "VotingTypeID", "VotingTypeName" },
+                values: new object[] { new Guid("8254d087-4ad7-4069-816f-5ed97d119716"), "Alegeri prezidentiale" });
+
+            migrationBuilder.InsertData(
+                table: "VotingTypes",
+                columns: new[] { "VotingTypeID", "VotingTypeName" },
+                values: new object[] { new Guid("ae040cc6-c820-4f54-8173-0510907c04ee"), "Alegeri parlamentare" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
