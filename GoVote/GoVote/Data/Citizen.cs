@@ -41,6 +41,12 @@ namespace GoVote.Data
             return this.VotedFor != new Guid("00000000-0000-0000-0000-000000000000");
         }
 
+
+        public void Update(Guid votedFor)
+        {
+            VotedFor = votedFor;
+        }
+
         public Guid ID { get; private set; }
 
         public string CNP { get; private set; }

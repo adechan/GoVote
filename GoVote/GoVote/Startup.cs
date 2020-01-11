@@ -25,19 +25,19 @@ namespace GoVote
         {
             services.AddControllers();
             services.AddDbContext<Data.CitizenDatabaseContext>(options =>
-               options.UseSqlServer(@"Server=.\MSSQLSERVER02; Database=CitizenDatabaseContext;Trusted_Connection=True;")
+               options.UseSqlServer(@"Server=.\SQLEXPRESS; Database=CitizenDatabaseContext;Trusted_Connection=True;")
            );
 
            services.AddDbContext<Data.PartyDatabaseContext>(options =>
-               options.UseSqlServer(@"Server=.\MSSQLSERVER02; Database=PartyDatabaseContext;Trusted_Connection=True;")
+               options.UseSqlServer(@"Server=.\SQLEXPRESS; Database=PartyDatabaseContext;Trusted_Connection=True;")
            );
 
             services.AddDbContext<Data.CandidateDatabaseContext>(options =>
-               options.UseSqlServer(@"Server=.\MSSQLSERVER02; Database=CandidateDatabaseContext;Trusted_Connection=True;")
+               options.UseSqlServer(@"Server=.\SQLEXPRESS; Database=CandidateDatabaseContext;Trusted_Connection=True;")
            );
 
             services.AddDbContext<Data.VotingTypeDatabaseContext>(options =>
-               options.UseSqlServer(@"Server=.\MSSQLSERVER02; Database=VotingTypeDatabaseContext;Trusted_Connection=True;")
+               options.UseSqlServer(@"Server=.\SQLEXPRESS; Database=VotingTypeDatabaseContext;Trusted_Connection=True;")
            );
 
             services.AddDbContext<Data.LoginTokenDatabaseContext>(options =>

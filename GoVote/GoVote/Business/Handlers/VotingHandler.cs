@@ -6,6 +6,7 @@ using GoVote.Data;
 using GoVote.DTO;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace GoVote.Business.Handlers
 {
@@ -22,26 +23,52 @@ namespace GoVote.Business.Handlers
 
         public async Task<Dictionary<string, Guid>> Handle(GetVote request, CancellationToken cancellationToken)
         {
-            var citizens = await _context.Citizens.ToListAsync();
-            var candidates = await _context.Candidates.ToListAsync();
+            /*var citizens = await _context.Citizens.ToListAsync();
+            var candidates = await _contextC.Candidates.ToListAsync();
             var result = new Dictionary <string, Guid>();
 
             foreach(Citizen citizen in citizens) 
             {
-                if(citizen.VotedFor == new System.Guid("00000000-0000-0000-0000-000000000000"))
+                if (citizen.ID == request.CitizenID)
                 {
-                    foreach()
+
+                    if (citizen.VotedFor == new System.Guid("00000000-0000-0000-0000-000000000000"))
+                    {
+                        foreach (Candidate candidate in candidates)
+                        {
+                            if (candidate.ID == request.CandidateID)
+                            {
+                                _context.Citizens.Update(request.CandidateID);
+                                await _context.SaveChangesAsync(cancellationToken);
+
+                                result.Add("ID citizen", citizen.ID);
+                                result.Add("ID candidate", candidate.ID);
+                            }
+                        }
+                    }
                 }
             }
 
-            var citizen = _context.Citizens.SingleOrDefault(c => c.CNP == request.CNP);
-            await _context.SaveChangesAsync(cancellationToken);
+            return result;*/
 
-            LoginToken token = LoginToken.Create(citizen.ID);
+            var citizen = _context.Citizens.SingleOrDefault(c => c.ID == request.CitizenID);
+            var candidate = _contextC.Candidates.SingleOrDefault(c => c.ID == request.CandidateID);
 
-            _login_context.LoginTokens.Add(token);
-            await _login_context.SaveChangesAsync(cancellationToken);
-            return new Dictionary<string, Guid>(citizen, token.Get());
+
+            var result = new Dictionary<string, Guid>();
+            if (citizen.VotedFor == new System.Guid("00000000-0000-0000-0000-000000000000"))
+            {
+                citizen.Update(request.CandidateID);
+                await _context.SaveChangesAsync(cancellationToken);
+
+                result.Add("ID citizen", citizen.ID);
+                result.Add("ID candidate", candidate.ID);
+
+            }
+
+            return result;
+
+           
         }
 
     }
