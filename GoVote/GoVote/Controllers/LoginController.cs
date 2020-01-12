@@ -4,6 +4,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using GoVote.DTO;
 using System;
+using System.Text.Json;
 
 namespace GoVote.Controllers
 {
@@ -26,6 +27,18 @@ namespace GoVote.Controllers
             if (cnp == null)
                 return NotFound();
             return Ok(cnp);
+        }
+
+        [HttpGet("{cnp}")]
+        public async Task<ActionResult<string>> Authorize(string cnp)
+        {
+            var response = await _mediator.Send(new GetCitizenDetails(cnp));
+            var json = JsonSerializer.Serialize(response);
+            if (response["succes"].Equals(false))
+            {
+                return BadRequest(json);
+            }
+            return json;
         }
     }
 }
